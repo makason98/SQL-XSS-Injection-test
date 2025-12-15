@@ -67,6 +67,9 @@ We want to make the `WHERE` clause always return `TRUE`.
 3. Leave the **Password** field empty (or type anything).
 4. Click **Authenticate**.
 
+<img width="1247" height="649" alt="image" src="https://github.com/user-attachments/assets/14eccb65-0e6b-4c38-b00f-e780d77f084d" />
+
+
 ### What Happens?
 The query becomes:
 ```sql
@@ -113,6 +116,9 @@ SELECT id, title, description, artist FROM songs WHERE id = -1 UNION SELECT 1, u
 3. The application displays the results:
     - **Title** column now shows the **username**.
     - **Description** column now shows the **password**.
+
+    <img width="1247" height="649" alt="image" src="https://github.com/user-attachments/assets/7304527c-87f3-41be-8604-743616072f70" />
+
 
 ## 3. Advanced: Dump Database Version
 
@@ -181,6 +187,7 @@ We will inject a script that makes a background request to our listener (`harves
 
 ### 3. Impact Analysis
 If an administrator views this Guestbook page while logged in, their session cookies would be sent to the attacker. The attacker could then use those cookies to hijack the administrator's session.
+<img width="1247" height="649" alt="image" src="https://github.com/user-attachments/assets/b9e53ac9-be4a-4578-a245-5957f18510fd" />
 
 ---
 
@@ -222,6 +229,8 @@ If you used the Harvester Payload:
     mysql -u root -p -e "SELECT * FROM xss_logs ORDER BY id DESC LIMIT 1" sql_injection_lab
     ```
 3.  You should see the IP address and cookies of the "victim" browser (the Incognito window).
+<img width="1247" height="649" alt="image" src="https://github.com/user-attachments/assets/fa4bc96f-bb24-4bc3-b24c-b065213ad471" />
+
 
 ## Summary
 -   **Stored XSS**: Attack code is on the server (Guestbook). Hits everyone who visits.
